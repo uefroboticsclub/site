@@ -8,6 +8,7 @@ export default function Home() {
         {/* You can put extra tags in here, or leave it blank */}
       </HeadObject>
       <Nav />
+      <p className='bg-primary'>sdsdsds</p>
       University of Eastern Finland Robotics Club
     </div>
   )
