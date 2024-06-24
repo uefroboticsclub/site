@@ -8,7 +8,7 @@ export default function HeadObject({children}) {
     const keywords = "university of eastern finland robotics club";
     const author = "UEF Robotics Club";
     const twitter = "@uefroboticsclub";
-    const url = "https://uefroboticsclub.com"; // This is your og:url or domain (optional but recommended)
+    const url = "https://uefroboticsclub.fi"; // This is your og:url or domain (optional but recommended)
     //const image = "/ogimage.png"; // This is your OpenGraph image
     return (
         <Head>

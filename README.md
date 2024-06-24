@@ -1,14 +1,39 @@
-# UEF Robotics Club
-The best Next.js boilerplate ever.
-# What does this have?
-- Tailwind CSS (no more going through the installation guide!) - for styling components easily
-- `next-themes` (@pacocoursey) - for going to the dark side
-- `swr` (@vercel) - for fetching constantly mutating data
-  - `fetcher.js` so you don't have to keep writing return functions
-- `framer-motion` - for making interactive components and eye-catching animations
-- `react-icons` - for including your favorite icon packs without increasing bundle size significantly. Tree shaking included.
-- `classnames` - for conditionally applying classes to components
-- `react-wrap-balancer` - for balancing text widths for titles and paragraphs
-- `tailwind-merge` - for merging Tailwind class names
+<p align="center"><img width="192" alt="UEF Robotics Club Logo" src="https://www.uef.fi/themes/custom/uef/images/icons/src/LOGO_nelio.svg"></p>
+<h1 align="center"><a href="https://uefroboticsclub.fi/">UEF Robotics Club</a></h1>
+<p align="center"><i>The source code for uefroboticsclub.com</i></p>
 
-&copy; 2024 Glory Olusola. Licensed under the [Unlicense](LICENSE) from Mozilla.
+UEF Robotics Club's website. This codebase is what runs on [uefroboticsclub.fi](https://uefroboticsclub.fi). For new developers getting started, run the following in your terminal:
+
+Download the code to your computer:
+
+    $ git clone https://github.com/uefroboticsclub/site && cd site
+
+Install dependencies:
+
+    $ npm install
+
+Start running the website on your computer:
+
+    $ npm run dev
+
+And then open up your web browser and go to [localhost:3000](http://localhost:3000).
+
+Powered by [Next.js], & [Tailwind CSS].
+
+Code under MIT License, assets may not be re-used or re-distributed.
+
+---
+
+<h1 align="center">Building <a href="https://uefroboticsclub.fi/">uefroboticsclub.fi</a></h1>
+
+Join us in building UEF Robotics Club's homepage and show the world what an helpful, honest and harmless robot ( 🦾🤖🦿) could be for them 💖.
+
+See something that could be better? Make a PR! Have an easter egg idea? Make a PR! Is the site missing something? Make a PR! _(Do you see a trend? :))_
+
+---
+
+&copy; 2024 UEF Robotics Club. MIT License
+
+
+[next.js]: https://nextjs.org
+[tailwind css]: https://tailwindcss.com
