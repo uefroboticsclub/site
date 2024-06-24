@@ -17,7 +17,8 @@ export default function Nav() {
     console.log("UEF Robotics Club Website");
   });
   return (
-    <nav className="dark:text-white bg-primary py-4 flex justify-center items-center md:text-xl">
+    <nav className="text-white bg-primary py-4 flex justify-center items-center md:text-xl">
+      {/* <nav className="dark:text-white bg-primary py-4 flex justify-center items-center md:text-xl"> */}
       {links.map(({ href, label, external }) =>
         external ? (
           <Link
@@ -39,7 +40,7 @@ export default function Nav() {
           </Link>
         )
       )}
-      <button
+      {/* <button
         onClick={() => {
           setTheme(theme === "dark" ? "light" : "dark");
           document
@@ -50,7 +51,7 @@ export default function Nav() {
         id="theme_toggle"
       >
         <CgDarkMode size={24} />
-      </button>
+      </button> */}
     </nav>
   );
 }
