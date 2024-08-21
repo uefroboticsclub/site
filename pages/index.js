@@ -1,51 +1,32 @@
-import Link from "next/link";
-import HeadObject from "../components/head";
-import Nav from "../components/nav";
+import { Box, Flex, Grid, Link, Text } from "theme-ui";
+import React, { useState } from "react";
+import Carousel from "../components/index/carousel";
+import GitHub from "../components/index/github";
+import Photo from "../components/common/photo";
 
-export default function Home() {
+export default function Home({ carouselCards, gitHubData }) {
+  const [count, setCount] = useState(0);
+
+  let images = [
+    {
+      alt: "Map of Hack Clubs around the world",
+      src: "/home/scifest-2024.jpg",
+    },
+    {
+      alt: "Hack Clubbers at SpaceX HQ in LA",
+      src: "/home/assemble.jpg",
+    },
+    {
+      alt: "MA Hacks, Hack Clubber organized hackathon",
+      src: "/home/assemble.jpg",
+    },
+    { alt: "AMA with Sal Khan", src: "/home/assemble.jpg" },
+    { alt: "Hack Clubbers at Flagship, 2019", src: "/home/assemble.jpg" },
+  ];
+  const nextImageIndex = (index) => (index + 1) % images.length;
+  const prevImageIndex = (index) => (index - 1 + images.length) % images.length;
   return (
-    <div className="dark:text-white dark:bg-black">
-      <HeadObject />
-      <Nav />
-      {/* Upper Banner */}
-      <div className="relative flex justify-center items-center bg-primary py-6">
-        <div>
-          <img
-            className="select-none mx-auto px-4 sm:h-28 lg:h-48"
-            src="/full_logo.png"
-          />
-          <div className="mt-4 text-white rounded-lg p-2 lg:p-4">
-            <h2 className="text-center text-4xl text-white lg:flex justify-center items-center">
-              Build
-              <div className=" mx-3 relative italic font-semibold underline lg:no-underline decoration-secondary">
-                something amazing
-                <img
-                  className="select-none hidden lg:block absolute top-6"
-                  src="/underline.svg"
-                />
-              </div>
-              in just 24 hours.
-            </h2>
-            <p className="mt-2 lg:mt-8 text-lg md:text-2xl text-center text-white/70">
-              June 22-23rd, 2024
-            </p>
-            <div className="flex flex-col items-center justify-center">
-              <a
-                href="/register"
-                className="mt-6 bg-white border-4 border-secondary hover:bg-white/90 text-primary font-semibold text-2xl px-8 py-4 rounded-lg"
-              >
-                Register Now
-              </a>
-            </div>
-          </div>
-        </div>
-        <div
-          style={{ transform: "translateX(-6%)" }}
-          className="bottom-0 absolute w-full"
-        ></div>
-      </div>
-
-      {/* Middle Content */}
+    <div>
       <div className="h-full">
         <div className="h-full bg-tertiary pb-12">
           <div className="lg:flex 3xl:w-2/3 mx-auto">
@@ -54,7 +35,7 @@ export default function Home() {
                 🔎 Who are we?
               </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
-                <p className="text-lg lg:text-xl">
+                <p className="text-lg lg:text-xl text-dark">
                   Windy City Hacks is a free two-day event for programmers,
                   artists, designers, & other high schoolers in the Chicagoland
                   area to come together and build apps & games. We'll provide
@@ -98,93 +79,396 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <h2
-            className="pt-8 text-center font-bouquet text-5xl text-primary"
-            id="faq"
-          >
-            🙋 FAQ
-          </h2>
-          <div className="mx-auto px-8 lg:w-2/3 lg:grid grid-cols-2 gap-6">
-            <div className="mt-4 mx-auto bg-white rounded-lg ring-2 ring-primary shadow-lg">
-              <h3 className="bg-primary text-white p-4 text-xl font-semibold rounded-t">
-                What is a hackathon?
-              </h3>
-              <p className="bottom-0 text-lg p-4">
-                A hackathon is a two-day event where you can learn to code,
-                build apps, and meet new friends. We'll have workshops, mentors,
-                and prizes to help you along the way.
-              </p>
-            </div>
-            <div className="mt-4 mx-auto bg-white rounded-lg ring-2 ring-primary shadow-lg">
-              <h3 className="bg-primary text-white p-4 text-xl font-semibold rounded-t">
-                Who can come?
-              </h3>
-              <p className="bottom-0 text-lg p-4">
-                If you're a high schooler, you can come! All skill levels are
-                welcome, from complete beginner to expert. You can form teams,
-                or fly solo. Just make sure to bring a valid school ID!
-              </p>
-            </div>
-          </div>
-          <div className="mt-4 mx-auto px-8 lg:w-2/3 lg:grid grid-cols-2 gap-6">
-            <div className="mt-4 mx-auto bg-white rounded-lg ring-2 ring-primary shadow-lg">
-              <h3 className="bg-primary text-white p-4 text-xl font-semibold rounded-t">
-                Hacking?!?!
-              </h3>
-              <p className="bottom-0 text-lg p-4">
-                Not THAT type of hacking, we're not hacking into servers or
-                databases. The word is being redefined to mean building
-                "things", like websites, games, or apps!
-              </p>
-            </div>
-            <div className="mt-4 mx-auto bg-white rounded-lg ring-2 ring-primary shadow-lg">
-              <h3 className="bg-primary text-white p-4 text-xl font-semibold rounded-t">
-                How much does it cost?
-              </h3>
-              <p className="bottom-0 text-lg p-4">
-                Nothing! Registration, attendence -- the entire event is 100%
-                free, thanks to our generous sponsors. Food, drinks, workshops,
-                and prizes are all included. Interested in sponsoring?{" "}
-                <a
-                  className="italic hover:underline decoration-wavy decoration-secondary"
-                  href="mailto:andrew@windycityhacks.com"
+          <Box as="section" sx={{ py: [4, 5, "82px"], color: "black" }}>
+            <Box
+              sx={{
+                position: "relative",
+                width: "90vw",
+                maxWidth: "layout",
+                margin: "auto",
+              }}
+            >
+              <Text
+                variant="title"
+                as="h1"
+                sx={{ fontSize: ["36px", "48px", "56px"] }}
+              >
+                Discover the{" "}
+                <Text
+                  as="span"
+                  sx={{
+                    borderRadius: "default",
+                    px: 1,
+                    mx: 0,
+                    whiteSpace: ["wrap", "nowrap", "nowrap"],
+                    color: "white",
+                    background: (theme) => theme.util.gx("red", "orange"),
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
                 >
-                  Contact us!
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="mt-4 mx-auto px-8 lg:w-2/3 lg:grid grid-cols-2 gap-6">
-            <div className="mt-4 mx-auto bg-white rounded-lg ring-2 ring-primary shadow-lg">
-              <h3 className="bg-primary text-white p-4 text-xl font-semibold rounded-t">
-                What should I bring?
-              </h3>
-              <p className="bottom-0 text-lg p-4">
-                First, yourself! Then, make sure to bring a computer, chargers,
-                anything else that may help you hack. Don't forget a student ID!
-                We'll be checking at the door.
-              </p>
-            </div>
-            <div className="mt-4 mx-auto bg-white rounded-lg ring-2 ring-primary shadow-lg">
-              <h3 className="bg-primary text-white p-4 text-xl font-semibold rounded-t">
-                Who is organizing this? Will it be supervised?
-              </h3>
-              <p className="bottom-0 text-lg p-4">
-                Windy City Hacks is independently organized by a group of high
-                school students from the Chicagoland area, fiscally sponsored by
-                an international nonprofit called{" "}
-                <a
-                  className="italic hover:underline decoration-wavy decoration-secondary"
-                  href="https://the.hackfoundation.org/"
-                  target="_blank"
+                  joy of code
+                </Text>
+                , together.
+              </Text>
+              <Text
+                variant="subtitle"
+                as="p"
+                sx={{
+                  fontSize: ["18px", "20px", "22px"],
+                  pb: [3, 3, 4],
+                  maxWidth: "62ch",
+                }}
+              >
+                Every day, thousands of Hack&nbsp;Clubbers gather online and
+                in-person to make things with code. Whether you’re a beginner
+                programmer or have years of experience, there’s a place for you
+                at Hack&nbsp;Club. Read about our{" "}
+                <Link href="/philosophy" target="_blank" rel="noopener">
+                  hacker ethic
+                </Link>
+                .
+              </Text>
+              <Grid
+                columns={[1, 1, 1, "2.5fr 3fr"]}
+                gap={[0, 3, 4]}
+                pt={[3, 4]}
+              >
+                <Box
+                  sx={{
+                    position: "relative",
+                    height: ["300px", "300px", "300px", "100%"],
+                    py: [3, 3, 3, 0],
+                  }}
+                  onClick={() => {
+                    setCount(nextImageIndex(count));
+                  }}
                 >
-                  The Hack Foundation
-                </a>
-                . We'll have adult mentors and chaperones supervising the entire
-                event.
-              </p>
-            </div>
-          </div>
+                  <Box
+                    sx={{ position: "absolute", width: "100%", height: "100%" }}
+                  >
+                    <Box
+                      sx={{
+                        position: "relative",
+                        height: ["300px", "300px", "100%"],
+                        figure: {
+                          position: "absolute",
+                          transform:
+                            count % 2 === 0 ? "rotate(3deg)" : "rotate(-3deg)",
+                          height: "85%",
+                          width: ["80%", "80%", "70%", "100%"],
+                          marginLeft: ["10%", "10%", "15%", "0"],
+                        },
+                        zIndex: 3,
+                        "&:hover": {
+                          cursor: "pointer",
+                        },
+                      }}
+                    >
+                      <Photo
+                        src={images[nextImageIndex(count + 1)].src}
+                        alt={images[nextImageIndex(count + 1)].alt}
+                        width={3000}
+                        height={2550}
+                        showAlt
+                      />
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{ position: "absolute", width: "100%", height: "100%" }}
+                  >
+                    <Box
+                      sx={{
+                        position: "relative",
+                        height: ["300px", "300px", "100%"],
+                        figure: {
+                          position: "absolute",
+                          transform:
+                            count % 2 === 0 ? "rotate(-3deg)" : "rotate(3deg)",
+                          height: "85%",
+                          width: ["80%", "80%", "70%", "100%"],
+                          marginLeft: ["10%", "10%", "15%", "0"],
+                        },
+                        zIndex: 3,
+                        "&:hover": {
+                          cursor: "pointer",
+                        },
+                      }}
+                    >
+                      <Photo
+                        src={images[nextImageIndex(count)].src}
+                        alt={images[nextImageIndex(count)].alt}
+                        width={3000}
+                        height={2550}
+                        showAlt
+                      />
+                    </Box>
+                  </Box>
+                  <Box
+                    sx={{ position: "absolute", width: "100%", height: "100%" }}
+                  >
+                    <Box
+                      sx={{
+                        position: "relative",
+                        height: ["300px", "300px", "100%"],
+                        figure: {
+                          position: "absolute",
+                          transform:
+                            count % 2 === 0 ? "rotate(3deg)" : "rotate(-3deg)",
+                          height: "85%",
+                          width: ["80%", "80%", "70%", "100%"],
+                          marginLeft: ["10%", "10%", "15%", "0"],
+                        },
+                        zIndex: 3,
+                        "&:hover": {
+                          cursor: "pointer",
+                        },
+                      }}
+                    >
+                      <Photo
+                        src={images[count].src}
+                        alt={images[count].alt}
+                        width={3000}
+                        height={2550}
+                        showAlt
+                      />
+                    </Box>
+                  </Box>
+                </Box>
+                <Grid
+                  columns="1fr"
+                  sx={{
+                    gridColumnGap: 3,
+                    span: {
+                      width: 36,
+                      height: 36,
+                      borderRadius: 24,
+                      display: "inline-block",
+                      fontSize: 2,
+                      lineHeight: "30px",
+                      textAlign: "center",
+                      fontWeight: "bold",
+                      border: "3px solid currentColor",
+                    },
+                    p: { my: 0, fontSize: ["18px", "20px", "22px"] },
+                    strong: { display: "block", fontSize: ["22px", 2, 3] },
+                  }}
+                  as="ul"
+                >
+                  <Grid
+                    columns="auto 1fr"
+                    sx={{
+                      transitionDuration: "0.52s",
+                      py: 2,
+                      px: 2,
+                      color: "inherit",
+                      position: "relative",
+                      textDecoration: "none",
+                      borderRadius: "extra",
+                    }}
+                    as="li"
+                  >
+                    <Text as="span" color="red" aria-hidden="true">
+                      1
+                    </Text>
+                    <Text as="p" variant="subtitle">
+                      <strong sx={{ mb: 1 }}>
+                        Connect with other teenage coders
+                      </strong>
+                      Have a coding question? Looking for project feedback?
+                      You’ll find hundreds of fabulous people to talk to in our
+                      global{" "}
+                      <Link href="/slack" target="_blank" rel="noopener">
+                        Slack{" "}
+                      </Link>
+                      (like Discord), active at all hours.
+                    </Text>
+                  </Grid>
+                  <Grid
+                    columns="auto 1fr"
+                    sx={{
+                      transitionDuration: "0.52s",
+                      py: 2,
+                      px: 2,
+                      color: "inherit",
+                      position: "relative",
+                      textDecoration: "none",
+                      borderRadius: "extra",
+                    }}
+                    as="li"
+                  >
+                    <Text as="span" color="orange" aria-hidden="true">
+                      2
+                    </Text>
+                    <Text
+                      as="p"
+                      variant="subtitle"
+                      sx={{
+                        mt: 0,
+                      }}
+                    >
+                      <strong sx={{ mb: 1 }}>
+                        Build open source learning tools
+                      </strong>
+                      We build large open source projects together (
+                      <Link href="https://github.com/hackclub" target="_blank">
+                        3k+&nbsp;PRs a year
+                      </Link>
+                      ) like this website, a game engine, daily streak system,
+                      and more!
+                    </Text>
+                  </Grid>
+                  <Grid
+                    columns="auto 1fr"
+                    sx={{
+                      transitionDuration: "0.52s",
+                      py: 2,
+                      px: 2,
+                      color: "inherit",
+                      position: "relative",
+                      textDecoration: "none",
+                      borderRadius: "extra",
+                    }}
+                    as="li"
+                  >
+                    <Text as="span" color="yellow" aria-hidden="true">
+                      3
+                    </Text>
+                    <Text as="p" variant="subtitle">
+                      <strong sx={{ mb: 1 }}>
+                        Gather IRL with other makers
+                      </strong>
+                      Meet other Hack&nbsp;Clubbers in your community to build
+                      together at one of the 400+{" "}
+                      <Link href="/clubs" target="_blank" rel="noopener">
+                        Hack&nbsp;Clubs
+                      </Link>{" "}
+                      and{" "}
+                      <Link href="/hackathons" target="_blank" rel="noopener">
+                        high school hackathons
+                      </Link>
+                      .
+                    </Text>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
+          <Carousel cards={carouselCards} />
+          <Box>
+            <Box py={[4, 5, "82px"]}>
+              <Box
+                sx={{
+                  width: "90vw",
+                  maxWidth: "layout",
+                  margin: "auto",
+                  position: "relative",
+                }}
+              >
+                <Flex
+                  sx={{
+                    flexDirection: ["column", "column", "column", "row"],
+                    justifyContent: gitHubData ? "center" : "flex-start",
+                    alignItems: [
+                      "flex-start",
+                      "flex-start",
+                      "flex-start",
+                      "center",
+                    ],
+                    gap: "10px",
+                  }}
+                >
+                  <Box sx={{ mb: [3, 0, 0] }}>
+                    <Text
+                      variant="title"
+                      as="h2"
+                      sx={{
+                        fontSize: ["36px", "48px", "56px"],
+                        maxWidth: "20ch",
+                      }}
+                    >
+                      We build{" "}
+                      <Text
+                        as="span"
+                        sx={{
+                          borderRadius: "default",
+                          mx: 0,
+                          whiteSpace: "nowrap",
+                          color: "orange",
+                        }}
+                      >
+                        open source
+                      </Text>{" "}
+                      tools & intelligent 🤖 together
+                    </Text>
+                    <Text
+                      variant="subtitle"
+                      as="p"
+                      sx={{
+                        fontSize: ["18px", "20px", "22px"],
+                        pb: [3, 0, 0],
+                        maxWidth: "60ch",
+                      }}
+                    >
+                      We collaborate to build intelligent robots, software,
+                      hardware and learning tools for each other. Get involved
+                      with these projects by building something with our tools
+                      or contribute to the tools themselves.
+                    </Text>
+                  </Box>
+                  {gitHubData && (
+                    <Flex
+                      sx={{
+                        flexDirection: ["row", null, null, "column"],
+                        gap: [1, 2, 2],
+                        alignItems: [
+                          "center",
+                          "center",
+                          "center",
+                          "flex-start",
+                        ],
+                        flexWrap: "wrap",
+                        width: ["100%", null, null, "fit-content"],
+
+                        "& > a:nth-child(n+4)": {
+                          display: ["none", null, null, "flex"],
+                        },
+                      }}
+                    >
+                      <Text
+                        sx={{
+                          fontSize: ["11px", "11px", "14px"],
+                          textAlign: "left",
+                          lineHeight: "90%",
+                          fontStyle: "italic",
+                          width: "fit-content",
+                        }}
+                      >
+                        Live from GitHub
+                      </Text>
+                      {gitHubData
+                        .filter((data) => !data.user.endsWith("[bot]"))
+                        .slice(0, 4)
+                        .map((data, key) => {
+                          return (
+                            <GitHub
+                              type={data.type}
+                              img={data.userImage}
+                              user={data.user}
+                              time={data.time}
+                              url={data.url}
+                              message={data.message}
+                              key={key}
+                              opacity={1 / (key / 2 + 1)}
+                            />
+                          );
+                        })}
+                    </Flex>
+                  )}
+                </Flex>
+              </Box>
+            </Box>
+          </Box>
           <h2
             className="mt-16 text-center font-bouquet text-5xl text-primary"
             id="sponsors"
@@ -263,309 +547,22 @@ export default function Home() {
               to learn more about sponsorships.
             </p>
           </div>
-          <h2 className="mt-16 text-center font-bouquet text-5xl text-primary">
-            🤝 Leadership
-          </h2>
-          <div className="mt-4 mx-8 lg:mx-auto lg:w-2/3 bg-white p-8 rounded-lg shadow-lg">
-            <div className="grid grid-rows-4 md:grid-rows-none md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <img
-                  className=" select-none rounded-full mx-auto max-h-40"
-                  src="/photos/andrew.jpeg"
-                />
-                <p className="mt-2 text-lg font-semibold">Andrew Wolf</p>
-                <p className="text-sm mb-1 text-gray-500">
-                  Stevenson High School
-                </p>
-                <div className="flex justify-center items-center">
-                  <a href="mailto:andrew@windycityhacks.com">
-                    <svg
-                      className="h-6"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"
-                          stroke="#F95A5F"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div className="text-center">
-                <img
-                  className="select-none rounded-full mx-auto max-h-40"
-                  src="/photos/connor.jpeg "
-                />
-                <p className="mt-2 text-lg font-semibold">Connor Lin</p>
-                <p className="text-sm mb-1 text-gray-500">
-                  Stevenson High School
-                </p>
-                <div className="flex justify-center items-center">
-                  <a href="mailto:connor@windycityhacks.com">
-                    <svg
-                      className="h-6"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"
-                          stroke="#F95A5F"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div className="text-center">
-                <img
-                  className="select-none rounded-full mx-auto max-h-40"
-                  src="/photos/mooky.jpg"
-                />
-                <p className="mt-2 text-lg font-semibold">Miles Klein</p>
-                <p className="text-sm mb-1 text-gray-500">
-                  Stevenson High School
-                </p>
-                <div className="flex justify-center items-center">
-                  <a href="mailto:miles@windycityhacks.com">
-                    <svg
-                      className="h-6"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"
-                          stroke="#F95A5F"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div className="text-center">
-                <img
-                  className="select-none rounded-full mx-auto max-h-40"
-                  src="/photos/jacob.jpg"
-                />
-                <p className="mt-2 text-lg font-semibold">Jacob Zerull</p>
-                <p className="text-sm mb-1 text-gray-500">
-                  Stevenson High School
-                </p>
-                <div className="flex justify-center items-center">
-                  <a href="mailto:jacob@windycityhacks.com">
-                    <svg
-                      className="h-6"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        <path
-                          d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"
-                          stroke="#F95A5F"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        ></path>
-                      </g>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Lower Banner */}
-      <div className="bg-primary pb-6">
-        <h2 className="pt-16 text-center text-5xl text-white lg:flex justify-center items-center">
-          Let's build
-          <p className="mx-4 relative italic font-semibold underline lg:no-underline decoration-secondary">
-            something amazing
-            <img
-              className="select-none hidden lg:block absolute top-7"
-              src="/underline.svg"
-            />
-          </p>
-          together.
-        </h2>
-        <div className="lg:w-2/3 mx-auto grid grid-rows-2 gap-8 md:grid-rows-none md:grid-cols-2 mt-12 md:mt-24">
-          <div className="text-center my-auto">
-            <p className="mt-2 mb-2 text-2xl lg:text-3xl text-center text-white/70">
-              June 22nd-23rd, 2024
-            </p>
-            <a
-              href="https://maps.app.goo.gl/9VjmWAJeGG5ngh417"
-              target="_blank"
-              className="hover:underline hover:decoration-wavy hover:decoration-secondary italic text-2xl lg:text-3xl text-center text-white/70"
-            >
-              University of Eastern Finland <br /> School of Computing <br />{" "}
-              Länsikatu 15 <br /> Joensuu Science Park <br /> FI-80101 Joensuu
-            </a>
-          </div>
-          <div className="text-center my-auto">
-            <a
-              href="/register"
-              className="bg-white border-4 border-secondary hover:bg-white/90 text-primary font-semibold text-2xl px-8 py-4 rounded-lg"
-            >
-              Register Now
-            </a>
-            <br />
-            <br />
-            <br />
-            <br />
-            <a
-              href="/discord"
-              className="bg-white border-4 border-secondary hover:bg-white/90 text-primary font-semibold text-2xl px-8 py-4 rounded-lg"
-            >
-              Join the Discord
-            </a>
-          </div>
-        </div>
-        <div className="mt-16 text-center">
-          <img className="select-none mx-auto px-4 h-16" src="/full_logo.png" />
-          <div className="w-2/3 md:w-1/6 mx-auto mt-4 grid grid-cols-3 gap-0">
-            <div className="mx-auto">
-              <Link href="mailto:team@windycityhacks.com">
-                <svg
-                  className="h-8"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M10 19H6.2C5.0799 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2C3 7.0799 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.0799 21 8.2V10M20.6067 8.26229L15.5499 11.6335C14.2669 12.4888 13.6254 12.9165 12.932 13.0827C12.3192 13.2295 11.6804 13.2295 11.0677 13.0827C10.3743 12.9165 9.73279 12.4888 8.44975 11.6335L3.14746 8.09863M14 21L16.025 20.595C16.2015 20.5597 16.2898 20.542 16.3721 20.5097C16.4452 20.4811 16.5147 20.4439 16.579 20.399C16.6516 20.3484 16.7152 20.2848 16.8426 20.1574L21 16C21.5523 15.4477 21.5523 14.5523 21 14C20.4477 13.4477 19.5523 13.4477 19 14L14.8426 18.1574C14.7152 18.2848 14.6516 18.3484 14.601 18.421C14.5561 18.4853 14.5189 18.5548 14.4903 18.6279C14.458 18.7102 14.4403 18.7985 14.405 18.975L14 21Z"
-                      stroke="#F95A5F"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </g>
-                </svg>
-              </Link>
-            </div>
-            <div className="mx-auto">
-              <Link
-                href="https://twitter.com/windycityhacks"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  className="h-8"
-                  fill=""
-                  viewBox="0 0 24 24"
-                  id="twitter"
-                  data-name="Flat Color"
-                  xmlns="http://www.w3.org/2000/svg"
-                  stroke=""
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      id="primary"
-                      d="M21.63,6.92a1,1,0,0,0-.83-.2,8.31,8.31,0,0,1-1.1.17,4.49,4.49,0,0,0-8.55.52c-2.73.67-5.4-2.07-5.43-2.1a1,1,0,0,0-1-.27,1,1,0,0,0-.7.8,11.69,11.69,0,0,0,1.51,8.67A7.25,7.25,0,0,1,3,15a1,1,0,0,0-.89,1.46C2.3,16.83,4.18,20,11.58,20c5.84,0,8-5.2,8.36-8.38A4,4,0,0,0,22,7.7,1,1,0,0,0,21.63,6.92Z"
-                      style={{ fill: "#F95A5F" }}
-                    ></path>
-                  </g>
-                </svg>
-              </Link>
-            </div>
-            <div className="mx-auto">
-              <Link
-                href="https://instagram.com/windycityhacks"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  className="h-8"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="2"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M2 6C2 3.79086 3.79086 2 6 2H18C20.2091 2 22 3.79086 22 6V18C22 20.2091 20.2091 22 18 22H6C3.79086 22 2 20.2091 2 18V6ZM6 4C4.89543 4 4 4.89543 4 6V18C4 19.1046 4.89543 20 6 20H18C19.1046 20 20 19.1046 20 18V6C20 4.89543 19.1046 4 18 4H6ZM12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9ZM7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17C9.23858 17 7 14.7614 7 12ZM17.5 8C18.3284 8 19 7.32843 19 6.5C19 5.67157 18.3284 5 17.5 5C16.6716 5 16 5.67157 16 6.5C16 7.32843 16.6716 8 17.5 8Z"
-                      fill="#F95A5F"
-                    ></path>{" "}
-                  </g>
-                </svg>
-              </Link>
-            </div>
-          </div>
-          <div className="w-2/3 mx-auto">
-            <p className="mt-4 text-white/70">&copy; Windy City Hacks 2024</p>
-            <a
-              href="/fiscal_sponsorship_confirmation.pdf"
-              target="_blank"
-              className="text-white/70 hover:underline hover:decoration-wavy hover:decoration-secondary italic"
-            >
-              Fiscally sponsored by The Hack Foundation (EIN: 81-2908499)
-            </a>
-          </div>
         </div>
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const carouselCards = require("../lib/data/carousel.json");
+
+  const { fetchGitHub } = require("./api/github");
+  let gitHubData = await fetchGitHub();
+
+  return {
+    props: {
+      carouselCards,
+      gitHubData,
+    },
+  };
 }

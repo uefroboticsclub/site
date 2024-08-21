@@ -16,3 +16,8 @@ html.dark {
 
 /* Fixes outline style for inputs on Safari */
 input:focus { outline: none; }
+
+.nav-opacity {
+  backdrop-filter: blur(10px); 
+  background-color: rgba(26, 77, 84, 0.411) !important;
+}
