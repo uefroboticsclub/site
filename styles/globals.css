@@ -3,21 +3,32 @@
 @tailwind utilities;
 
 html.dark {
-    color: #ffffff;
-    background-color: #000000;
+  color: #ffffff;
+  background-color: #000000;
 }
 
 /* Fixes Tailwind h-screen on iPhones */
 @supports (-webkit-touch-callout: none) {
-    .h-screen {
-      height: -webkit-fill-available;
-    }
+  .h-screen {
+    height: -webkit-fill-available;
   }
+}
 
 /* Fixes outline style for inputs on Safari */
-input:focus { outline: none; }
+input:focus {
+  outline: none;
+}
 
 .nav-opacity {
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
+  background-color: rgba(26, 77, 84, 0.411) !important;
+}
+
+.nav-transparent {
+  background-color: transparent !important;
+}
+
+.nav-blur {
+  backdrop-filter: blur(10px);
   background-color: rgba(26, 77, 84, 0.411) !important;
 }

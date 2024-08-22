@@ -1,5 +1,5 @@
 import { Box, Text } from "theme-ui";
-import CarouselCards from "./carousel-cards";
+import CarouselCards from "./CarouselCards";
 import React, { useState } from "react";
 import Ticker from "react-ticker";
 import PageVisibility from "react-page-visibility";

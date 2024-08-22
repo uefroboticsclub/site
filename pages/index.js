@@ -1,8 +1,11 @@
-import { Box, Flex, Grid, Link, Text } from "theme-ui";
+import { Box, Flex, Grid, Link, Text, Heading, Button, Badge } from "theme-ui";
 import React, { useState } from "react";
 import Carousel from "../components/index/carousel";
 import GitHub from "../components/index/github";
 import Photo from "../components/common/photo";
+import BGImg from "../components/common/BackgroundImage";
+import OuternetImgFile from "../public/robots/midjourney1.jpeg";
+import Comma from "../components/common/Comma";
 
 export default function Home({ carouselCards, gitHubData }) {
   const [count, setCount] = useState(0);
@@ -27,6 +30,125 @@ export default function Home({ carouselCards, gitHubData }) {
   const prevImageIndex = (index) => (index - 1 + images.length) % images.length;
   return (
     <div>
+      <div className="relative flex justify-center items-center bg-primary py-6">
+        <div>
+          <img
+            className="select-none mx-auto px-4 sm:h-28 lg:h-48"
+            src="/logo_uef.svg"
+          />
+          <Box
+            sx={{
+              width: "90vw",
+              maxWidth: [null, "layout"],
+              position: "relative",
+              mx: "auto",
+              py: [4, 4, 4],
+              textShadow: "text",
+            }}
+          >
+            <Text
+              variant="eyebrow"
+              sx={{
+                color: "sunken",
+                pb: 2,
+                position: "relative",
+                display: "block",
+              }}
+              as="h4"
+            >
+              Welcome to UEF&nbsp;Robotics&nbsp;Club
+            </Text>
+            <Heading>
+              <Text
+                as="p"
+                variant="title"
+                sx={{
+                  color: "white",
+                  mb: [3, 4],
+                  zIndex: 1,
+                  textAlign: "left",
+                  fontSize: ["42px", "52px", "64px"],
+                  lineHeight: 1.2,
+                  width: "100%",
+                }}
+              >
+                We are a group of budding
+                <Text
+                  sx={{
+                    color: "transparent",
+                    ml: 2,
+                    mr: 3,
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <Text
+                    sx={{
+                      px: 2,
+                      backgroundColor: "red",
+                      position: "absolute",
+                      borderRadius: 10,
+                      transform: "rotate(-3deg) translateY(-5px)",
+                      color: "white",
+                      whiteSpace: "nowrap",
+                      textDecoration: "none",
+                    }}
+                    aria-hidden="true"
+                  >
+                    engineers
+                  </Text>
+                  engineers
+                </Text>
+                <br sx={{ display: ["inline", "none", "none"] }} /> from around
+                the world united by our love for coding and robotics.
+              </Text>
+              <Button
+                variant="ctaLg"
+                as="a"
+                target="_blank"
+                href="https://github.com/uefroboticsclub"
+                mt={[3, 0, 0]}
+                sx={{ transformOrigin: "center left" }}
+              >
+                Join our community
+              </Button>
+            </Heading>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: ["flex-start", "flex-start", "flex-end"],
+              marginRight: 2,
+              mt: [4, 3, 1],
+            }}
+          >
+            <Badge
+              as="a"
+              href="https://outernet.hackclub.com/"
+              target="_blank"
+              rel="noopener"
+              variant="pill"
+              sx={{
+                zIndex: "1",
+                bg: "black",
+                color: "white",
+                opacity: 1,
+                textDecoration: "none",
+                fontWeight: "normal",
+                ":hover": { opacity: 1 },
+                transition: "0.3s ease",
+              }}
+              title="📸 Photo by Matt Gleich, Hack Clubber in NH!"
+            >
+              Ideal image description here..
+            </Badge>
+          </Box>
+        </div>
+        <div
+          style={{ transform: "translateX(-6%)" }}
+          className="bottom-0 absolute w-full"
+        ></div>
+      </div>
+
       <div className="h-full">
         <div className="h-full bg-tertiary pb-12">
           <div className="lg:flex 3xl:w-2/3 mx-auto">
@@ -65,18 +187,53 @@ export default function Home({ carouselCards, gitHubData }) {
               </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
                 <p className="text-lg lg:text-xl">
-                  Now, more than ever, coding and digital design have become
-                  vital skills. Classes in school are great, but don't offer a
-                  way for you to think outside of the box. Learning online
-                  builds independence, with confusion and lack of community.
-                  Building (and{" "}
+                  Now, more than ever, coding, engineering and digital design
+                  are essential skills. Classes in school offer a solid start,
+                  but they often don't encourage out-of-the-box cracking.
+                  Learning online builds independence, with confusion and lack
+                  of community. Building (and{" "}
                   <i className="underline decoration-dotted decoration-secondary">
                     breaking
                   </i>
                   ) things <b>together</b> is the <i>best</i> way to learn.
                   That's why we're here.
+                  <br></br>-<br></br>
+                  Today's technology makes implementing anything in pure "C"
+                  fairly easy with machines doing much of the heavy lifting
+                  (90%). Join us if you are tired of having a straightforward
+                  good time and want to once in a while beat your head on the
+                  wall or stay up too late stuck on something while learning.
                 </p>
               </div>
+            </div>
+          </div>
+          <div className="lg:flex 3xl:w-2/3 mx-auto">
+            <div className="lg:w-1/2 p-8 my-auto">
+              <h4 className="pt-8 text-center font-bouquet text-3xl text-primary">
+                🤔 Unbridled Optimism: 15 Beacons Illuminating Humanity's
+                Ascendance
+              </h4>
+              <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
+                <p className="text-lg lg:text-xl text-dark">
+                  As human ingenuity and collaboration redefine possibility, 15
+                  innovators shine: Starship to Meta Reality Labs, NASA Artemis,
+                  and SpaceX Mars. Together, they forge an unwavering,
+                  resplendent tomorrow, where collaboration, vision, and
+                  innovation illuminate boundless human potential – and we are
+                  "extremely" bullish on mankind.{" "}
+                </p>
+              </div>
+            </div>
+            <div className="lg:w-3/5 p-8 my-auto">
+              <video
+                className="w-full mt-4 rounded-lg shadow-lg"
+                controls={true}
+                controlsList="nodownload"
+                autoPlay={false}
+                src="/robots/bullish.mp4"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
           <Box as="section" sx={{ py: [4, 5, "82px"], color: "black" }}>

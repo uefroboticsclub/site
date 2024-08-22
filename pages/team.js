@@ -142,7 +142,7 @@ export default function Team({ team }) {
                 }}
                 as="h2"
               >
-                Thank you to everyone who helped shape the Club and into what it
+                Thank you to everyone who helped shape the Club into what it
                 is today...
               </Text>
             </Box>

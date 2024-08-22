@@ -4,8 +4,7 @@ import { useTheme } from "next-themes";
 
 const links = [
   { label: "Home", href: "/" },
-  { label: "Donate", href: "/donate", external: true },
-  { label: "Sign Up", href: "/register", external: true },
+  { label: "Join Us", href: "https://github.com/uefroboticsclub", external: true },
   { label: "Our Team", href: "/team" },
 ];
 
