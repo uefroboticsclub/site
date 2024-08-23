@@ -28,7 +28,7 @@ Code under MIT License, assets may not be re-used or re-distributed.
 
 Join us in building UEF Robotics Club's homepage and show the world what an helpful, honest and harmless robot ( 🦾🤖🦿) could be for them 💖.
 
-See something that could be better? Make a PR! Have an easter egg idea? Make a PR! Is the site missing something? Make a PR! _(Do you see a trend? :))_
+See something that could be better? Make a PR! Make a PR! Is the site missing something? Make a PR! _(Do you see a trend? :))_
 
 ---
 
