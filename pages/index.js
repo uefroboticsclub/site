@@ -16,15 +16,15 @@ export default function Home({ carouselCards, gitHubData }) {
       src: "/home/scifest-2024.jpg",
     },
     {
-      alt: "Hack Clubbers at SpaceX HQ in LA",
+      alt: "Image description",
       src: "/home/assemble.jpg",
     },
     {
-      alt: "MA Hacks, Hack Clubber organized hackathon",
+      alt: "Image description",
       src: "/home/assemble.jpg",
     },
-    { alt: "AMA with Sal Khan", src: "/home/assemble.jpg" },
-    { alt: "Hack Clubbers at Flagship, 2019", src: "/home/assemble.jpg" },
+    { alt: "Image description", src: "/home/assemble.jpg" },
+    { alt: "Image description", src: "/home/assemble.jpg" },
   ];
   const nextImageIndex = (index) => (index + 1) % images.length;
   const prevImageIndex = (index) => (index - 1 + images.length) % images.length;
@@ -694,7 +694,7 @@ export default function Home({ carouselCards, gitHubData }) {
             <p className="mt-8 pb-4 text-center">
               This could be <span className="text-secondary">YOU</span>!{" "}
               <a
-                href="mailto:andrew@windycityhacks.com"
+                href="mailto:uefrobotics@gmail.com"
                 className="italic hover:underline decoration-wavy decoration-secondary"
               >
                 Contact us
