@@ -9,7 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.0",
+    "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@hackclub/icons": "^0.0.15",
     "@hackclub/theme": "^0.3.3",
