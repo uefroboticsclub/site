@@ -18,7 +18,7 @@ Start running the website on your computer:
 
 And then open up your web browser and go to [localhost:3000](http://localhost:3000).
 
-Powered by [Next.js], & [Tailwind CSS].
+Powered by [Next.js], [Tailwind CSS] & [Theme UI].
 
 Code under MIT License, assets may not be re-used or re-distributed.
 
@@ -37,3 +37,4 @@ See something that could be better? Make a PR! Have an easter egg idea? Make a P
 
 [next.js]: https://nextjs.org
 [tailwind css]: https://tailwindcss.com
+[theme ui]: https://theme-ui.com/
