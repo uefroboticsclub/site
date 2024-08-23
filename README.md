@@ -10,11 +10,11 @@ Download the code to your computer:
 
 Install dependencies:
 
-    $ npm install
+    $ yarn install
 
 Start running the website on your computer:
 
-    $ npm run dev
+    $ yarn dev
 
 And then open up your web browser and go to [localhost:3000](http://localhost:3000).
 
