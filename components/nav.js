@@ -3,8 +3,11 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 const links = [
-  { label: "Home", href: "/" },
-  { label: "Join Us", href: "https://github.com/uefroboticsclub", external: true },
+  {
+    label: "Join Us",
+    href: "https://github.com/uefroboticsclub",
+    external: true,
+  },
   { label: "Our Team", href: "/team" },
 ];
 
@@ -37,6 +40,11 @@ export default function Nav() {
         hasScrolled ? "nav-opacity" : "bg-primary"
       }`}
     >
+      <div className="">
+        <Link href="/" passHref>
+          <img src="/logo_uef.svg" alt="Logo" className="h-8" />
+        </Link>
+      </div>
       {links.map(({ href, label, external }) =>
         external ? (
           <Link

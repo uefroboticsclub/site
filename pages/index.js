@@ -32,10 +32,6 @@ export default function Home({ carouselCards, gitHubData }) {
     <div>
       <div className="relative flex justify-center items-center bg-primary py-6">
         <div>
-          <img
-            className="select-none mx-auto px-4 sm:h-28 lg:h-48"
-            src="/logo_uef.svg"
-          />
           <Box
             sx={{
               width: "90vw",
