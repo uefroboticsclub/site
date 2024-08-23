@@ -158,12 +158,12 @@ export default function Home({ carouselCards, gitHubData }) {
               </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
                 <p className="text-lg lg:text-xl text-dark">
-                  Windy City Hacks is a free two-day event for programmers,
-                  artists, designers, & other high schoolers in the Chicagoland
-                  area to come together and build apps & games. We'll provide
-                  workshops to learn, mentors to assist, food to eat, and prizes
-                  to win. The next day, judges will pick the best demos to win
-                  prizes!
+                  We're a wild bunch obsessed with robots and pushing limits.
+                  Inspired by crazy ideas like self-landing rockets and the raw
+                  potential of AI, we're diving headfirst into the future, one
+                  electrifying project at a time. Join us if you're a curious
+                  mind with a hunger for the unknown ready to get your hands
+                  dirty and craft the future with a healthy dose of mischief.
                 </p>
               </div>
             </div>
@@ -190,15 +190,19 @@ export default function Home({ carouselCards, gitHubData }) {
                   Now, more than ever, coding, engineering and digital design
                   are essential skills. Classes in school offer a solid start,
                   but they often don't encourage out-of-the-box cracking.
-                  Learning online builds independence, with confusion and lack
-                  of community. Building (and{" "}
+                  Learning online builds independence, but comes with confusion
+                  and lack of community. Building (and{" "}
                   <i className="underline decoration-dotted decoration-secondary">
                     breaking
                   </i>
                   ) things <b>together</b> is the <i>best</i> way to learn.
                   That's why we're here.
-                  <br></br>-<br></br>
-                  Today's technology makes implementing anything in pure "C"
+                  <br></br>
+                  <br></br>
+                  Today's technology makes implementing anything in pure{" "}
+                  <i>
+                    <b>"C" </b>
+                  </i>
                   fairly easy with machines doing much of the heavy lifting
                   (90%). Join us if you are tired of having a straightforward
                   good time and want to once in a while beat your head on the
@@ -209,18 +213,26 @@ export default function Home({ carouselCards, gitHubData }) {
           </div>
           <div className="lg:flex 3xl:w-2/3 mx-auto">
             <div className="lg:w-1/2 p-8 my-auto">
-              <h4 className="pt-8 text-center font-bouquet text-3xl text-primary">
-                🤔 Unbridled Optimism: 15 Beacons Illuminating Humanity's
-                Ascendance
-              </h4>
+              <h2 className="pt-8 text-center font-bouquet text-5xl text-primary">
+                💡 Can We Do More?
+              </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
                 <p className="text-lg lg:text-xl text-dark">
-                  As human ingenuity and collaboration redefine possibility, 15
-                  innovators shine: Starship to Meta Reality Labs, NASA Artemis,
-                  and SpaceX Mars. Together, they forge an unwavering,
-                  resplendent tomorrow, where collaboration, vision, and
-                  innovation illuminate boundless human potential – and we are
-                  "extremely" bullish on mankind.{" "}
+                  As human ingenuity and collaboration redefine possibility,
+                  these innovations shine bright: from Starship and Cybertruck
+                  to Varda re-entry, Figure, and SpaceX's flight suit, Waymo's
+                  autonomous vehicles, Anduril's defense tech, Intel's
+                  advancements, Blue Origin's space exploration, Neuralink's AI
+                  integration, SpaceX's Starlink deployment, Meta Reality Labs',
+                  Boston Dynamics' robots, Boom Supersonic's faster travel, and
+                  NASA's Artemis mission, to SpaceX's Mars mission render –
+                  together, they forge an unwavering, resplendent tomorrow,
+                  where collaboration, vision, and innovation illuminate
+                  boundless human potential – and we are
+                  <i className="underline decoration-dotted decoration-secondary">
+                    "extremely"
+                  </i>{" "}
+                  bullish on mankind.
                 </p>
               </div>
             </div>
