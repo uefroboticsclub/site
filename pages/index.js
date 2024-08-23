@@ -119,7 +119,6 @@ export default function Home({ carouselCards, gitHubData }) {
           >
             <Badge
               as="a"
-              href="https://outernet.hackclub.com/"
               target="_blank"
               rel="noopener"
               variant="pill"
@@ -133,7 +132,7 @@ export default function Home({ carouselCards, gitHubData }) {
                 ":hover": { opacity: 1 },
                 transition: "0.3s ease",
               }}
-              title="📸 Photo by Matt Gleich, Hack Clubber in NH!"
+              title="📸 Photo credit title"
             >
               Ideal image description here..
             </Badge>

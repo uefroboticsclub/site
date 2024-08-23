@@ -6,7 +6,7 @@
       "title": "Jams",
       "description": "Collaborative coding workshops where sparks ignite, fears dissolve, and inventions come to life",
       "img": "https://cloud-7xyxcf3f6-hack-club-bot.vercel.app/0new_project__3_.png",
-      "link": "https://jams.hackclub.com"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "snow",
@@ -15,7 +15,7 @@
       "title": "Putting The \"You\" In CPU",
       "description": "Curious exactly what happens when you run a program on your computer? Read this.",
       "img": "https://cloud-eg2ex8nol-hack-club-bot.vercel.app/0favicon-on-light-removebg-preview.png",
-      "link": "https://cpu.land"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "#e5e6da",
@@ -24,7 +24,7 @@
       "title": "The Bin",
       "description": "A free electronics starter kit for high schoolers, shipped to your door.",
       "img": "https://cloud-e3pxf7bt9-hack-club-bot.vercel.app/0ezgif.com-resize.gif",
-      "link": "https://hackclub.com/bin"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "#000",
@@ -33,7 +33,7 @@
       "title": "Sprig",
       "description": "Join hundreds of teenagers making tile-based JavaScript games",
       "img": "https://emoji.slack-edge.com/T0266FRGM/sprig-dino/6f01fec60b51b343.png",
-      "link": "https://sprig.hackclub.com"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "snow",
@@ -42,7 +42,7 @@
       "title": "Some Assembly Required",
       "description": "The 4th most starred Assembly repository on GitHub",
       "img": "https://emoji.slack-edge.com/T0266FRGM/someassemblyrequired/cfacfacaaa2d8b1d.png",
-      "link": "https://github.com/hackclub/some-assembly-required"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "#271932",
@@ -51,7 +51,7 @@
       "title": "SineRider",
       "description": "Help build a game about love, math, and graphing 💖",
       "img": "https://emoji.slack-edge.com/T0266FRGM/sinerider/68a0bc1208e885dd.png",
-      "link": "https://sinerider.com"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "dark",
@@ -60,7 +60,7 @@
       "title": "OnBoard",
       "description": "Join 1k teens designing PCBs, learning hardware, and building electronics",
       "img": "https://cloud-jrox24mrn.vercel.app/orpheus_leap_micro_final.png",
-      "link": "/onboard"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "dark",
@@ -69,7 +69,7 @@
       "title": "Blot",
       "description": "An open source drawing machine and online editor for generative art",
       "img": "https://emoji.slack-edge.com/T0266FRGM/tw_pencil2/c6afadc2280e571d.png",
-      "link": "https://blot.hackclub.dev"
+      "link": "https://github.com/uefroboticsclub"
     },
     {
       "background": "#e9e9e9",
@@ -79,6 +79,6 @@
       "title": "Nest",
       "description": "Free Debian backend hosting provided by Hack Club for all teenagers in Hack Club",
       "img": "https://cloud-56h978nbq-hack-club-bot.vercel.app/0logo.png",
-      "link": "https://guides.hackclub.app"
+      "link": "https://github.com/uefroboticsclub"
     }
   ]
