@@ -12,7 +12,7 @@ export default function Home({ carouselCards, gitHubData }) {
 
   let images = [
     {
-      alt: "Map of Hack Clubs around the world",
+      alt: "Clubbers at Scifest, 2024",
       src: "/home/scifest-2024.jpg",
     },
     {
@@ -272,7 +272,7 @@ export default function Home({ carouselCards, gitHubData }) {
                     WebkitTextFillColor: "transparent",
                   }}
                 >
-                  joy of code
+                  joy of building
                 </Text>
                 , together.
               </Text>
@@ -285,14 +285,12 @@ export default function Home({ carouselCards, gitHubData }) {
                   maxWidth: "62ch",
                 }}
               >
-                Every day, thousands of Hack&nbsp;Clubbers gather online and
-                in-person to make things with code. Whether you’re a beginner
-                programmer or have years of experience, there’s a place for you
-                at Hack&nbsp;Club. Read about our{" "}
-                <Link href="/philosophy" target="_blank" rel="noopener">
-                  hacker ethic
-                </Link>
-                .
+                Every week, we gather in-person to build, break, and learn stuff
+                together with silicon, code, and electricity. Whether you’re a
+                beginner builder or a seasoned pro, we invite you to join the
+                collaborative chaos, there’s a place for you at the Club. Our
+                community is built on the hacker's ethic: sharing knowledge,
+                working together, and embracing the thrill of the unknown.
               </Text>
               <Grid
                 columns={[1, 1, 1, "2.5fr 3fr"]}
@@ -438,15 +436,10 @@ export default function Home({ carouselCards, gitHubData }) {
                     </Text>
                     <Text as="p" variant="subtitle">
                       <strong sx={{ mb: 1 }}>
-                        Connect with other teenage coders
+                        Connect with fellow builders
                       </strong>
-                      Have a coding question? Looking for project feedback?
-                      You’ll find hundreds of fabulous people to talk to in our
-                      global{" "}
-                      <Link href="/slack" target="_blank" rel="noopener">
-                        Slack{" "}
-                      </Link>
-                      (like Discord), active at all hours.
+                      Have a question about robots, silicon, coding or need
+                      feedback on a project? Our community is here to help.
                     </Text>
                   </Grid>
                   <Grid
@@ -476,11 +469,15 @@ export default function Home({ carouselCards, gitHubData }) {
                         Build open source learning tools
                       </strong>
                       We build large open source projects together (
-                      <Link href="https://github.com/hackclub" target="_blank">
-                        3k+&nbsp;PRs a year
+                      <Link
+                        href="https://github.com/uefroboticsclub"
+                        target="_blank"
+                        color="secondary"
+                      >
+                        100k+&nbsp;commits a year
                       </Link>
-                      ) like this website, a game engine, daily streak system,
-                      and more!
+                      ) like this website, robotics arm, AI-powered engine,
+                      several software system, and more!
                     </Text>
                   </Grid>
                   <Grid
@@ -501,18 +498,11 @@ export default function Home({ carouselCards, gitHubData }) {
                     </Text>
                     <Text as="p" variant="subtitle">
                       <strong sx={{ mb: 1 }}>
-                        Gather IRL with other makers
-                      </strong>
-                      Meet other Hack&nbsp;Clubbers in your community to build
-                      together at one of the 400+{" "}
-                      <Link href="/clubs" target="_blank" rel="noopener">
-                        Hack&nbsp;Clubs
-                      </Link>{" "}
-                      and{" "}
-                      <Link href="/hackathons" target="_blank" rel="noopener">
-                        high school hackathons
-                      </Link>
-                      .
+                        Meet and build with other members IRL
+                      </strong>{" "}
+                      Join the collective chaos in person and share your passion
+                      for robotics and coding. Build, break, and learn together
+                      with our robotics club.
                     </Text>
                   </Grid>
                 </Grid>
