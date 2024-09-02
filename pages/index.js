@@ -631,7 +631,7 @@ export default function Home({ carouselCards, gitHubData }) {
           </h2>
           <div className="mt-4 mx-8 lg:mx-auto lg:w-2/3 bg-white px-8 pt-8 rounded-lg shadow-lg">
             <div className="lg:grid grid-cols-3 gap-4 justify-center items-center mb-8 sm:mb-0">
-              <a href="https://aws.amazon.com" target="_blank">
+              {/* <a href="https://aws.amazon.com" target="_blank">
                 <img
                   className="mx-auto max-h-16 mb-8 lg:mb-0"
                   src="/sponsors/aws.png"
@@ -688,7 +688,7 @@ export default function Home({ carouselCards, gitHubData }) {
                 className="text-center mx-auto"
               >
                 <img className="max-h-36" src="/sponsors/angaza.png" />
-              </a>
+              </a> */}
             </div>
             <p className="mt-8 pb-4 text-center">
               This could be <span className="text-secondary">YOU</span>!{" "}
