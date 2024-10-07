@@ -1,10 +1,9 @@
-import HeadObject from "./head";
+import HeadObject from "./Head";
 import Nav from "./nav";
 import Link from "next/link";
 import { Box, Heading, Text, Button, Badge } from "theme-ui";
 import BGImg from "../components/common/BackgroundImage";
 import OuternetImgFile from "../public/robots/midjourney1.jpeg";
-import Comma from "../components/common/Comma";
 
 const Layout = ({ children }) => {
   const currentYear = new Date().getFullYear();
