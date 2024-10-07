@@ -1,4 +1,4 @@
-import HeadObject from "./Head";
+import HeadObject from "./head";
 import Nav from "./nav";
 import Link from "next/link";
 import { Box, Heading, Text, Button, Badge } from "theme-ui";
