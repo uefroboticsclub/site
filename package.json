@@ -14,7 +14,7 @@
     "@hackclub/icons": "^0.0.15",
     "@hackclub/theme": "^0.3.3",
     "classnames": "^2.3.2",
-    "framer-motion": "^11.5.6",
+    "framer-motion": "^11.11.1",
     "lodash": "^4.17.21",
     "next": "^14.2.14",
     "next-themes": "^0.3.0",
