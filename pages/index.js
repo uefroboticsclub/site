@@ -5,7 +5,6 @@ import GitHub from "../components/index/github";
 import Photo from "../components/common/photo";
 import BGImg from "../components/common/BackgroundImage";
 import OuternetImgFile from "../public/robots/midjourney1.jpeg";
-import Comma from "../components/common/Comma";
 
 export default function Home({ carouselCards, gitHubData }) {
   const [count, setCount] = useState(0);
@@ -132,9 +131,9 @@ export default function Home({ carouselCards, gitHubData }) {
                 ":hover": { opacity: 1 },
                 transition: "0.3s ease",
               }}
-              title="📸 Photo credit title"
+              title="📸 credit"
             >
-              Ideal image description here..
+              from here on everything accelerate..
             </Badge>
           </Box>
         </div>
@@ -148,7 +147,7 @@ export default function Home({ carouselCards, gitHubData }) {
         <div className="h-full bg-tertiary pb-12">
           <div className="lg:flex 3xl:w-2/3 mx-auto">
             <div className="lg:w-1/2 p-8 my-auto">
-              <h2 className="pt-8 text-center font-bouquet text-5xl text-primary">
+              <h2 className="pt-8 text-center font-bouquet text-4xl text-primary">
                 🔎 Who are we?
               </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
@@ -165,19 +164,19 @@ export default function Home({ carouselCards, gitHubData }) {
             <div className="lg:w-3/5 p-8 my-auto">
               <img
                 className="select-none border-4 border-primary object-cover rounded-lg mx-auto"
-                src="/photos/group.jpg"
+                src="/robots/midjourney1.jpeg"
               />
             </div>
           </div>
           <div className="lg:flex 3xl:w-2/3 mx-auto">
-            <div className="p-8 my-auto">
+            <div className="lg:w-3/5 p-8 my-auto">
               <img
                 className="select-none border-4 border-primary object-cover rounded-lg mx-auto my-auto"
-                src="/photos/mentors.jpeg"
+                src="/robots/midjourney2.jpg"
               />
             </div>
             <div className="lg:w-3/5 p-8 my-auto">
-              <h2 className="lg:pt-8 text-center font-bouquet text-5xl text-primary">
+              <h2 className="lg:pt-8 text-center font-bouquet text-4xl text-primary">
                 🤷 But why?
               </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
@@ -208,7 +207,7 @@ export default function Home({ carouselCards, gitHubData }) {
           </div>
           <div className="lg:flex 3xl:w-2/3 mx-auto">
             <div className="lg:w-1/2 p-8 my-auto">
-              <h2 className="pt-8 text-center font-bouquet text-5xl text-primary">
+              <h2 className="pt-8 text-center font-bouquet text-4xl text-primary">
                 💡 Can We Do More?
               </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
@@ -288,8 +287,8 @@ export default function Home({ carouselCards, gitHubData }) {
                 together with silicon, code, and electricity. Whether you’re a
                 beginner builder or a seasoned pro, we invite you to join the
                 collaborative chaos, there’s a place for you at the Club. Our
-                community is built on the hacker's ethic: sharing knowledge,
-                working together, and embracing the thrill of the unknown.
+                community is built on the ethic of: sharing knowledge, working
+                together, and embracing the thrill of the unknown.
               </Text>
               <Grid
                 columns={[1, 1, 1, "2.5fr 3fr"]}
@@ -476,7 +475,7 @@ export default function Home({ carouselCards, gitHubData }) {
                         100k+&nbsp;commits a year
                       </Link>
                       ) like this website, robotics arm, AI-powered engine,
-                      several software system, and more!
+                      several software system, tooling, and more!
                     </Text>
                   </Grid>
                   <Grid
@@ -624,71 +623,19 @@ export default function Home({ carouselCards, gitHubData }) {
             </Box>
           </Box>
           <h2
-            className="mt-16 text-center font-bouquet text-5xl text-primary"
+            className="mt-16 text-center font-bouquet text-4xl text-primary"
             id="sponsors"
           >
             🤟 Sponsors
           </h2>
           <div className="mt-4 mx-8 lg:mx-auto lg:w-2/3 bg-white px-8 pt-8 rounded-lg shadow-lg">
             <div className="lg:grid grid-cols-3 gap-4 justify-center items-center mb-8 sm:mb-0">
-              {/* <a href="https://aws.amazon.com" target="_blank">
-                <img
-                  className="mx-auto max-h-16 mb-8 lg:mb-0"
-                  src="/sponsors/aws.png"
-                />
-              </a>
-              <a href="https://vercel.com" target="_blank">
-                <img
-                  className="mx-auto max-h-16 mb-8 lg:mb-0"
-                  src="/sponsors/vercel.png"
-                />
-              </a>
-              <a href="https://usefathom.com" target="_blank">
+              <a href="https://uef.fi" target="_blank">
                 <img
                   className="mx-auto max-h-24 mb-8 lg:mb-0"
-                  src="/sponsors/fathom.png"
+                  src="/sponsors/uef.png"
                 />
               </a>
-              <a href="https://developer.cisco.com/" target="_blank">
-                <img className="mx-auto max-h-24" src="/sponsors/cisco.png" />
-              </a>
-              <a href="https://draftbit.com/" target="_blank">
-                <img
-                  className="mx-auto max-h-36"
-                  src="/sponsors/draftbit.png"
-                />
-              </a>
-              <a href="https://desmos.com/" target="_blank">
-                <img
-                  className="mx-auto max-h-12 mb-12 lg:mb-0"
-                  src="/sponsors/desmos.png"
-                />
-              </a>
-              <a href="https://codecrafters.io/" target="_blank">
-                <img
-                  className="mx-auto max-h-16 mt-4"
-                  src="/sponsors/codecrafters.png"
-                />
-              </a>
-              <a href="https://hackclub.com/" target="_blank">
-                <img
-                  className="mx-auto max-h-24"
-                  src="/sponsors/hackclub.png"
-                />
-              </a>
-              <a href="https://www.pcnation.com/" target="_blank">
-                <img
-                  className="mx-auto max-h-64"
-                  src="/sponsors/pcNation.png"
-                />
-              </a>
-              <a
-                href="https://www.angazacenter.org/"
-                target="_blank"
-                className="text-center mx-auto"
-              >
-                <img className="max-h-36" src="/sponsors/angaza.png" />
-              </a> */}
             </div>
             <p className="mt-8 pb-4 text-center">
               This could be <span className="text-secondary">YOU</span>!{" "}
