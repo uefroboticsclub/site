@@ -630,7 +630,7 @@ export default function Home({ carouselCards, gitHubData }) {
           </h2>
           <div className="mt-4 mx-8 lg:mx-auto lg:w-2/3 bg-white px-8 pt-8 rounded-lg shadow-lg">
             <div className="lg:grid grid-cols-3 gap-4 justify-center items-center mb-8 sm:mb-0">
-              <a href="https://uef.fi" target="_blank">
+              <a href="https://cs.uef.fi" target="_blank">
                 <img
                   className="mx-auto max-h-24 mb-8 lg:mb-0"
                   src="/sponsors/uef.png"
