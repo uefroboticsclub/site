@@ -28,7 +28,7 @@
     "sharp": "^0.33.5",
     "swr": "^2.2.1",
     "tailwind-merge": "^2.5.4",
-    "theme-ui": "^0.16.2"
+    "theme-ui": "^0.17.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
