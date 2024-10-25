@@ -67,7 +67,7 @@ export default function Home({ carouselCards, gitHubData }) {
                   width: "100%",
                 }}
               >
-                We are a group of budding
+                We try to code and build
                 <Text
                   sx={{
                     color: "transparent",
@@ -89,22 +89,21 @@ export default function Home({ carouselCards, gitHubData }) {
                     }}
                     aria-hidden="true"
                   >
-                    engineers
+                    robots
                   </Text>
-                  engineers
+                  robots
                 </Text>
-                <br sx={{ display: ["inline", "none", "none"] }} /> from around
-                the world united by our love for coding and robotics.
+                <br sx={{ display: ["inline", "none", "none"] }} /> and stuff...
               </Text>
               <Button
                 variant="ctaLg"
                 as="a"
                 target="_blank"
-                href="https://github.com/uefroboticsclub"
+                href="https://forms.office.com/e/vZeQzgmYju?origin=lprLink"
                 mt={[3, 0, 0]}
                 sx={{ transformOrigin: "center left" }}
               >
-                Join our community
+                Join us!
               </Button>
             </Heading>
           </Box>
@@ -133,7 +132,7 @@ export default function Home({ carouselCards, gitHubData }) {
               }}
               title="📸 credit"
             >
-              from here on everything accelerate..
+              from here on everything accelerates...
             </Badge>
           </Box>
         </div>
@@ -152,12 +151,9 @@ export default function Home({ carouselCards, gitHubData }) {
               </h2>
               <div className="w-full mt-4 mx-auto bg-white p-4 rounded-lg shadow-lg">
                 <p className="text-lg lg:text-xl text-dark">
-                  We're a wild bunch obsessed with robots and pushing limits.
-                  Inspired by crazy ideas like self-landing rockets and the raw
-                  potential of AI, we're diving headfirst into the future, one
-                  electrifying project at a time. Join us if you're a curious
-                  mind with a hunger for the unknown ready to get your hands
-                  dirty and craft the future with a healthy dose of mischief.
+                We’re a group of students who love exploring, building, and diving into new ideas. 
+                Inspired by breakthrough tech like Spot (the robot) and AI, we tackle each project with curiosity and creativity. 
+                If you’re ready to get hands-on, learn as you go, and bring a bit of fun to building the future, join us—we’d love to create something amazing together!
                 </p>
               </div>
             </div>

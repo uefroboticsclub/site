@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 const links = [
   {
     label: "Join Us",
-    href: "https://github.com/uefroboticsclub",
+    href: "https://forms.office.com/e/vZeQzgmYju?origin=lprLink",
     external: true,
   },
   { label: "Our Team", href: "/team" },
