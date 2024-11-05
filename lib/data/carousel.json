@@ -3,18 +3,19 @@
       "background": "snow",
       "titleColor": "dark",
       "descriptionColor": "black",
-      "title": "Apollo 11",
-      "description": "Original AGC source code for the command and lunar modules.",
-      "img": "https://emoji.slack-edge.com/T0266FRGM/someassemblyrequired/cfacfacaaa2d8b1d.png",
-      "link": "https://github.com/uefroboticsclub"
+      "title": "LinguisticROS",
+      "description": "nlp-powered robotic control in ROS.",
+      "img": "https://emoji.slack-edge.com/T0266FRGM/someassemblyrequired/cfacfacaaa2d8b1d.png  ",
+      "link": "https://github.com/uefroboticsclub/LinguisticROS"
     },
     {
       "background": "dark",
       "titleColor": "green",
       "descriptionColor": "white",
-      "title": "OnBoard",
-      "description": "Designing PCBs, learning hardware, and building electronics",
+      "title": "Lego Sorting",
+      "description": "Robot that uses machine vision to short Lego pieces. ",
       "img": "https://cloud-jrox24mrn.vercel.app/orpheus_leap_micro_final.png",
       "link": "https://github.com/uefroboticsclub"
     }
+    
   ]
