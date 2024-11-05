@@ -9,6 +9,7 @@ const links = [
     external: true,
   },
   { label: "Our Team", href: "/team" },
+  
 ];
 
 export default function Nav() {
