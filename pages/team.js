@@ -36,6 +36,7 @@ export default function Team({ team }) {
                     text={member.text}
                     pronouns={member.pronouns}
                     email={member.email}
+                    href={member.href}
                   />
                 ))}
               </Grid>

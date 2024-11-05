@@ -68,7 +68,7 @@ export default function CarouselCards({
         >
           <Text
             as="h3"
-            sx={{ color: titleColor, fontSize: ["20px", "21px", "22px"] }}
+            sx={{ color: titleColor, fontSize: ["30px", "21px", "22px"],  fontWeight: "bold" }}
           >
             {title}
           </Text>
