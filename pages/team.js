@@ -8,85 +8,7 @@ export default function Team({ team }) {
       <Box as="main" key="main" bg="primary">
         <Box bg="#BFE6EA" py={4}>
           <Container>
-            <Flex
-              sx={{
-                bg: "#F95A5F",
-                p: 3,
-                borderRadius: "20px",
-                mb: 3,
-                gap: 3,
-                flexWrap: ["wrap", null, null, "nowrap"],
-              }}
-            >
-              <Text
-                variant="headline"
-                as="h3"
-                sx={{
-                  textAlign: "center",
-                  fontSize: 3,
-                  writingMode: [null, null, null, "vertical-rl"],
-                  mr: [0, 0, 0, 1],
-                  transform: [null, null, null, "rotate(180deg)"],
-                  width: ["100%", null, null, "fit-content"],
-                  my: ["0px!important", "0px!important", "0px!important", 3],
-                }}
-              >
-                Advisors
-              </Text>
-              <Box sx={{ flexGrow: 1 }}>
-                <Grid columns={[1, null, 2]} gap={2} mb={2}>
-                  <Bio
-                    img="/team/default.jpg"
-                    name="Advisor One"
-                    teamRole="Advisor"
-                    subrole="Main Role"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    pronouns="he/him"
-                    email="advisor1"
-                    href="https://uef.fi/en"
-                  />
-                  <Bio
-                    img="/team/default.jpg"
-                    name="Advisor Two"
-                    teamRole="Advisor"
-                    subrole="Main Role"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    pronouns="she/her"
-                    email="advisor2"
-                    href="https://uef.fi/en"
-                  />
-                </Grid>
-                <Grid columns={[1, null, 3]} gap={2}>
-                  <Bio
-                    img="/team/default.jpg"
-                    name="Advisor Three"
-                    teamRole="Advisor"
-                    subrole="Main Role"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    pronouns="he/him"
-                    href="https://uef.fi/en"
-                  />
-                  <Bio
-                    img="/team/default.jpg"
-                    name="Advisor Four"
-                    teamRole="Advisor"
-                    subrole="Main Role"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    pronouns="she/her"
-                    href="https://uef.fi/en"
-                  />
-                  <Bio
-                    img="/team/default.jpg"
-                    name="Advisor Five"
-                    teamRole="Advisor Five"
-                    subrole="Main Role"
-                    text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                    pronouns="he/him"
-                    href="https://uef.fi/en"
-                  />
-                </Grid>
-              </Box>
-            </Flex>
+            
             <Box
               sx={{
                 bg: "rgb(166 51 214 / 40%)",
@@ -114,10 +36,76 @@ export default function Team({ team }) {
                     text={member.text}
                     pronouns={member.pronouns}
                     email={member.email}
+                    href={member.href}
                   />
                 ))}
               </Grid>
             </Box>
+            <br />  
+            <Flex
+              sx={{
+                bg: "#F95A5F",
+                p: 3,
+                borderRadius: "20px",
+                mb: 3,
+                gap: 3,
+                flexWrap: ["wrap", null, null, "nowrap"],
+              }}
+            >
+              <Text
+                variant="headline"
+                as="h3"
+                sx={{
+                  textAlign: "center",
+                  fontSize: 3,
+                  writingMode: [null, null, null, "vertical-rl"],
+                  mr: [0, 0, 0, 1],
+                  transform: [null, null, null, "rotate(180deg)"],
+                  width: ["100%", null, null, "fit-content"],
+                  my: ["0px!important", "0px!important", "0px!important", 3],
+                }}
+              >
+                Advisors
+              </Text>
+              <Box sx={{ flexGrow: 1 }}>
+                <Grid columns={[1, null, 2]} gap={2} mb={2}>
+                  
+                </Grid>
+                <Grid columns={[1, null, 3]} gap={2}>
+                <Bio
+                    img="/team/Ilkka Jormanainen.jpg"
+                    name="Ilkka Jormanainen"
+                    teamRole="Advisor"
+                    subrole="University lecturer and Researcher"
+                    text="I work as a university researcher in the educational and development technologies research group Information..."
+                    pronouns="he/him"
+                    email="ilkka.jormanainen@uef.fi"
+                    href="https://uefconnect.uef.fi/henkilo/ilkka.jormanainen/"
+                  />
+                  <Bio
+                    img="/team/Samuel-Yigzaw.png"
+                    name="Samuel Yigzaw"
+                    teamRole="Advisor"
+                    subrole="University lecturer and Researcher"
+                    text=""
+                    pronouns="he/him"
+                    email="samuel.yigzaw@uef.fi"
+                    href="https://uefconnect.uef.fi/henkilo/samuel.yigzaw/"
+                  />
+                  <Bio
+                    img="/team/Erkki Sutinen.jpg"
+                    name="Erkki Sutinen"
+                    teamRole="Advisor"
+                    subrole="Professor"
+                    text="Professor of Computer Science (Interaction design) at the University of Turku "
+                    pronouns="he/him"
+                    email="erkki.sutinen@utu.fi"
+                    href="https://www.utu.fi/fi/ihmiset/erkki-sutinen"
+                  />
+                </Grid>
+              </Box>
+            </Flex>
+
             <br />
             <Box sx={{ textAlign: "center", mt: 2, mb: [3, 4] }}>
               <Text
