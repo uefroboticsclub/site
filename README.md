@@ -26,7 +26,7 @@ Code under MIT License, assets may not be re-used or re-distributed.
 
 <h1 align="center">Building <a href="https://uefrobotics.org/">uefrobotics.org</a></h1>
 
-Join us in building UEF Robotics Club's homepage and show the world what an helpful, honest and harmless robot ( 🦾🤖🦿) could be for them 💖.
+Join us in building UEF Robotics Club's homepage and show the world what a helpful, honest and harmless robot ( 🦾🤖🦿) could be for them 💖.
 
 See something that could be better? Make a PR! Is the site missing something? Make a PR! _(Do you see a trend? :))_
 
