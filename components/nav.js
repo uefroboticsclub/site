@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
 const links = [
+  { label: "Our Team", href: "/team" },
+  { label: "Calender", href: "/calender" },
   {
     label: "Join Us",
     href: "https://forms.office.com/e/vZeQzgmYju?origin=lprLink",
     external: true,
   },
-  { label: "Our Team", href: "/team" },
+  
   
 ];
 

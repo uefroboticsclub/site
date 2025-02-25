@@ -462,15 +462,7 @@ export default function Home({ carouselCards, gitHubData }) {
                       <strong sx={{ mb: 1 }}>
                         Build open source learning tools
                       </strong>
-                      We build large open source projects together (
-                      <Link
-                        href="https://github.com/uefroboticsclub"
-                        target="_blank"
-                        color="secondary"
-                      >
-                        100k+&nbsp;commits a year
-                      </Link>
-                      ) like this website, robotics arm, AI-powered engine,
+                      We build open source projects together like this website, robotics arm,
                       several software system, tooling, and more!
                     </Text>
                   </Grid>
@@ -626,10 +618,16 @@ export default function Home({ carouselCards, gitHubData }) {
           </h2>
           <div className="mt-4 mx-8 lg:mx-auto lg:w-2/3 bg-white px-8 pt-8 rounded-lg shadow-lg">
             <div className="lg:grid grid-cols-3 gap-4 justify-center items-center mb-8 sm:mb-0">
-              <a href="https://cs.uef.fi" target="_blank">
+              <a href="https://www.uef.fi/en/unit/school-of-computing" target="_blank">
                 <img
                   className="mx-auto max-h-24 mb-8 lg:mb-0"
                   src="/sponsors/uef.png"
+                />
+              </a>
+              <a href="https://www.tiedeseura.fi/" target="_blank">
+                <img
+                  className="mx-auto max-h-24 mb-8 lg:mb-0"
+                  src="/sponsors/jsc.png"
                 />
               </a>
             </div>

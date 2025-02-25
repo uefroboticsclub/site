@@ -95,7 +95,7 @@ export default function Bio({ popup = true, spanTwo = false, ...props }) {
           </Flex>
           {!popup && email && (
             <Text color="muted" as={"a"} href={`mailto:${email}@uef.fi`}>
-              {email}@uef.com
+              {email}@uef.fi
               <br />
             </Text>
           )}
