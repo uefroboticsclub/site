@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/site",
   output: "export",
   reactStrictMode: true,
   images: {
@@ -9,4 +8,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
 
