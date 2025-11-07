@@ -657,7 +657,7 @@ export async function getStaticProps() {
   return {
     props: {
       carouselCards,
-      gitHubData,
+      gitHubData: JSON.parse(JSON.stringify(gitHubData)),
     },
   };
 }
